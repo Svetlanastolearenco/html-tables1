@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Pseudo selectors</title>
+    <style>
+        body{background-color: #333;
+             margin:0;
+             font-family: arial}
+        form{background-color: #445;
+             padding:50px}
+        input{width: 100px;
+              padding: 10px;
+              border: 1px solid #222;
+              outline: none;
+              border-radius: 3px;
+              transition: 0.7s}
+        button{padding: 10px;
+               border: 1px solid #222;
+               background-color: darksalmon;
+               color: rgb(29, 3, 48)}
+
+        button:hover{background-color: lightskyblue}
+        input:focus{width: 500px}
+    </style>
+</head>
+<body>
+    <form action="https://yandex.ru/search/">
+        <input name="text" type="text" placeholder="Search" autofocus>
+        <button > &#10148; </button>
+    </form>
+</body>
+</html>
