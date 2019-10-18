@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Pseudo</title>
+    <style>
+        #smile{width: 200px;
+        height: 200px;
+        background-color: orange;
+        font-size: 150px;
+        text-align: center;
+        transition: 0.5s;
+        border-radius: 200px}
+        #smile::before{content: "["}
+        #smile:hover{transform:rotate(90deg);
+        border-radius: 0}
+    </style>
+</head>
+<body>
+    <div id="smile">:)</div>
+</body>
+</html>
