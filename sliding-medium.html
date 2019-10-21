@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Sliding-medium</title>
+    <style>
+        body{background-color: #777;
+             margin: 0}
+
+        #navigation{background-color: #333;
+                    width: 275px;
+                    box-shadow: 0 0 3px 2px #111;
+                    margin-left: -278px;
+                    transition: 0.7s}
+
+        ul{margin: 0;
+           padding: 0}
+
+        a{text-decoration: none;
+          color: #FFF;
+          font-family: arial}
+        
+        li{padding: 15px 20px 15px 20px;
+           border-bottom: 1px solid #222}
+        
+        #arrow{font-size: 55px;
+              margin-left: 275px;
+              color: #333;
+              /*link to flashing animation*/
+              animation:flashing 2s infinite}
+
+        li:hover{background-color: #444}
+
+        li:last-child:hover{background-color: transparent}
+
+        #navigation:hover{margin-left: 0}
+
+        @keyframes flashing{
+            from{color: #3338}
+            to{color: #333F}
+        }
+    </style>
+</head>
+<body>
+    <nav id="navigation">
+        <ul>
+            <li><a href=""><img
+                        src="http://icons.iconarchive.com/icons/double-j-design/origami-colored-pencil/32/blue-home-icon.png">
+                    Home</a></li>
+            <li><a href=""><img src="http://icons.iconarchive.com/icons/gakuseisean/aire/32/Images-icon.png"> Photos</a>
+            </li>
+            <li><a href=""><img
+                        src="http://icons.iconarchive.com/icons/cornmanthe3rd/metronome/32/Communication-email-blue-icon.png">
+                    Communities</a></li>
+            <li><a href=""><img
+                        src="http://icons.iconarchive.com/icons/google/noto-emoji-objects/32/62868-page-facing-up-icon.png">
+                    Pages</a></li>
+            <li><a href=""><img
+                        src="http://icons.iconarchive.com/icons/custom-icon-design/pretty-office-11/32/hot-icon.png">
+                    Hot</a></li>
+            <li><a id="arrow" href=""> &#10263; </a></li>
+        </ul>
+    </nav>
+</body>
+</html>
