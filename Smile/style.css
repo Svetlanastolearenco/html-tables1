@@ -1,0 +1,48 @@
+body{background-color: #333}
+
+#road{background-color: brown;
+      width: 500px;
+      height: 10px;
+      margin-top: 600px}
+
+#boby{width: 100px;
+      height: 20px;
+      background-color: orange;
+      padding-top: 80px;
+      transform:translateY(-134px);
+      animation:move 2.5s 1}
+
+#boby-wrapper{border:1px dotted green;
+              animation: tilt 0.7s 10}
+
+#boby>.legs{width: 20px;
+            height: 20px;
+            margin-left: 40px}
+
+#boby>.legs>div{width: 10px;
+                height: 50px;
+                background-color: black;
+                float: left;
+                border-bottom: 5px solid #FFF}
+
+#boby>.legs>div:first-child{transform:rotate(15deg);
+                            animation:run 0.25s 10}
+
+#boby>.legs>div:last-child{transform:rotate(-15deg);
+                           animation:run 0.25s 10;
+                           animation-delay: 0.125s}
+            
+@keyframes run{
+   from{transform: rotate(-15deg)}
+   to{transform: rotate(15deg)}
+}
+
+ @keyframes move{
+   from{margin-left: 0}
+   to{margin-left: 600px}
+ }
+
+ @keyframes tilt{
+     from {transform: rotate(-3deg)}
+     to {transform: rotate(3deg)}
+ }
