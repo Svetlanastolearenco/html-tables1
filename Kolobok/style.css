@@ -1,0 +1,112 @@
+body{background-color: #333;
+     margin-left: 80px;}
+
+#road{background-color: brown;
+      width: 500px;
+      height: 10px;
+      margin-top: 600px}
+
+#boby{width: 100px;
+      height: 20px;
+      background-color: orange;
+      padding-top: 80px;
+      transform:translateY(-134px);
+      animation:move 2.8s 1;
+      margin-left: 20px;}
+
+#boby-wrapper{animation: tilt 0.25s 10}
+
+#boby>.legs{width: 20px;
+            height: 20px;
+            margin-left: 40px}
+
+#boby>.legs>div{width: 10px;
+                height: 50px;
+                background-color: black;
+                float: left;
+                border-bottom: 5px solid #FFF;
+                border-radius: 30%;}
+
+#boby>.legs>div:first-child{transform:rotate(15deg);
+                            animation:run 0.25s 10}
+
+#boby>.legs>div:last-child{transform:rotate(-15deg);
+                           animation:run 0.25s 10;
+                           animation-delay: 0.125s}
+
+.eyes{width: 15px;
+      height: 20px;
+      background-color:blue;
+      float:left;
+      transform:translateY(-135px);
+      border-radius: 60%;
+      margin-left:13px;
+      animation:eye 0.4s 3;
+      border: 3px solid darkblue;
+      border-right-width: 0;
+      animation-delay:3s}
+
+.eyes:first-child{margin-right: 28px;}
+
+.mouth{width:30px;
+       height: 8px;
+       background-color: orangered;
+       transform: translateY(-40px);
+       border-radius: 90%;
+       margin-left: 35px;}
+
+.hands{width: 140px;
+       height: 20px;
+       transform:translateY(-90px);
+       float:left;}
+
+.hands>div{width: 10px;
+           height: 50px;
+           background-color: black;
+           float: left;
+           border-bottom: 5px solid #FFF;
+           margin-left: -12px;
+           border-radius: 60%;}
+
+.hands>div:first-child{margin-right: 115px;
+                       transform: rotate(25deg);
+                       animation:hand 0.25s 10}
+
+.hands>div:last-child{transform: rotate(-25deg);
+                      animation:hand 0.25s 10;
+                      animation-delay: 0.125s;}
+
+#boby:hover{background-color: plum;}
+
+            
+@keyframes run{
+   from{transform: rotate(-15deg)}
+   to{transform: rotate(15deg)}
+}
+
+@keyframes hand{
+   from{transform: rotate(25deg)}
+   to{transform: rotate(-25deg)}
+}
+
+ @keyframes move{
+   from{margin-left: 0;
+      transform:translateY(-134px)}
+   60%{margin-left: 500px;
+      transform:translateY(-134px);
+      border-radius: 60%;}
+   to{margin-left: 600px;
+      transform:translateY(100px);
+      border-radius: 100%;
+      background-color: yellow;}
+ }
+
+ @keyframes tilt{
+     from {transform: rotate(-3deg)}
+     to {transform: rotate(3deg)}
+ }
+
+ @keyframes eye{
+     from{transform: scaleY(0);}
+     to{transform: scaleY(0.5)]
+ }
