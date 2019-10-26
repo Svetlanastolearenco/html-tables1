@@ -1,0 +1,28 @@
+#fon{width:500px;
+     height:500px;
+     background-color: #333;
+     border-radius: 25px;
+     margin:100px 350px}
+
+#circle{width: 200px;
+        height: 200px;
+        border-radius: 100%;
+        background-color: rgb(164, 238, 228);
+        margin: 150px;
+        transform:translateY(150px);
+        box-shadow: 4px 4px 25px 2px black;}
+
+#circle:hover{background-color: rgb(97, 129, 197);}
+
+.pensil:first-child{width: 30px;
+                    height: 100px;
+                    margin-left: 130px;
+                    background-color: #333;
+                    transform: rotate(45deg) translateY(58px)}
+
+.pensil:last-child{width: 2px;
+                   height: 15px;
+                   margin-left: 58px;
+                   transform:rotate(45deg) translateY(33px);
+                   border:15px solid transparent;
+                   border-top:15px solid #333;}
