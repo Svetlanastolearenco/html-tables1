@@ -1,0 +1,66 @@
+body{
+    background-color: #333;
+}
+#carousel{
+    height: 450px;
+    position: relative;
+    top: 250px;
+}
+.center{
+    position: absolute;
+}
+.images picture:first-child{
+    position: absolute;
+    left: 250px;
+    top: 40px;
+    z-index: -2;
+}
+.images picture:first-child+picture{
+    position: absolute;
+    left: 340px;
+}
+.images picture:last-child{
+    position: absolute;
+    left: 550px;
+    z-index: -1;
+    top: 40px;
+}
+.images picture:first-child img{
+    height: 320px;
+    width: 480px;
+}
+.images picture:first-child+picture img{
+    width: 600px;
+    height: 400px;
+}
+.images picture:last-child img{
+    height: 320px;
+    width: 480px;
+}
+.images picture img{
+    box-shadow: -0.5px 0.5px 4px 0.2px black;
+}
+.controls{
+    font-size: 2em;
+}
+.controls a:first-child{
+    position: absolute;
+    left: 180px;
+    top: 179px;
+}
+.controls a:last-child{
+    position: absolute;
+    right: 180px;
+    top: 179px;
+}
+.controls a i{
+    color: yellow;
+}
+.indicators {
+    position: absolute;
+    top: 430px;
+    left: 609px;
+}
+.indicators a i{
+    color: yellow;
+}
