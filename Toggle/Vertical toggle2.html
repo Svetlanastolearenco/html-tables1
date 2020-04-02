@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Vertical Toggle</title>
+    <style>
+        body{
+            background-color: #333;
+        }
+        .toggle{
+            background-color: #777;
+            border-radius: 2em;
+            cursor: pointer;
+            position: relative;
+        }
+        .toggle span{
+            background-color: #777;
+            display: inline-block;
+            border-radius: 2em;
+            width: 1.2em;
+            height: 3em;
+            box-shadow: 0 0 5px 0.1px black;
+        }
+        .toggle input{
+            display: none;
+        }
+        .toggle span span{
+            background-color: #BBB;
+            display: inline-block;
+            width: 1em;
+            height: 1em;
+            border-radius: 1em;
+            position: absolute;
+            bottom: 2.1em;
+            left: 0.1em;
+            box-shadow: 0 0 5px 0.1px black;
+        }
+        .toggle input:checked+span{
+            bottom: 0.2em;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <label class="toggle">
+        <span>
+        <input type="checkbox">
+            <span></span>
+        </span>
+    </label>
+</body>
+</html>

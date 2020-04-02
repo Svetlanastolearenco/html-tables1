@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Toggle</title>
+    <style>
+        body{
+            background-color: #333;
+        }
+        .toggle{
+            background-color: #777;
+            border-radius: 2em;
+            cursor: pointer;
+            position: relative;
+        }
+        .toggle input{
+            display: none;
+        }
+        .toggle span{
+            background-color: #BBB;
+            display: inline-block;
+            width: 1em;
+            height: 1em;
+            border-radius: 1em;
+            position: absolute;
+            left: 0.2em;
+            top: 0.2em;
+            box-shadow: 0 0 5px 0.1px black;
+        }
+        .toggle div{
+            background-color: #777;
+            display: inline-block;
+            width: 4em;
+            height: 1.4em;
+            border-radius: 2em;
+            position: absolute;
+            z-index: -1;
+            box-shadow: 0 0 5px 0.1px black;
+        }
+        .toggle input:checked+span{
+            left: 2.8em;
+        }
+        .toggle input:checked+span+div{
+            background-color: green;
+        }
+        
+    </style>
+</head>
+<body>
+    <label class="toggle">
+        <input type="checkbox">
+        <span></span>
+        <div></div>
+    </label>
+</body>
+</html>
