@@ -1,0 +1,117 @@
+body{
+    background-color: #333;
+}
+.paper-folding{
+    display: inline-block;
+    width: 1100px;
+    height: 500px;
+    border: 10px solid #FFF;
+    margin-top: 150px;
+    margin-left: 40px;
+    font-size: 0;
+}
+.paper-folding .image{
+    display: inline-block;
+    perspective: 500px;
+    width: 1000px;
+    height: 500px;
+    margin-right: 0;
+}
+.paper-folding .image div{
+    display: inline-block;
+    background-color: #777;
+    width: 200px;
+    height: 500px;
+    background-image: url(https://i.picsum.photos/id/866/1000/500.jpg);
+}
+.paper-folding .image>div:nth-child(1)::after{
+    display: inline-block;
+    content: "";
+    width: 200px;
+    height: 500px;
+    background-image: linear-gradient(-100deg, #000A, #0000);
+}
+.paper-folding .image div:nth-child(2){
+    background-position: -200px 0px;
+    transform: rotateY(-40deg) scale(1.15);
+    margin-left: -6%;
+}
+.paper-folding .image>div:nth-child(2)::after{
+    display: inline-block;
+    content: "";
+    width: 200px;
+    height: 500px;
+    background-image: linear-gradient(100deg, #000A, #0001);
+}
+.paper-folding .image div:nth-child(3){
+    background-position: -400px 0px;
+    transform: rotateY(40deg) scale(1.15);
+    margin-left: -2.5%;
+}
+.paper-folding .image>div:nth-child(3)::after{
+    display: inline-block;
+    content: "";
+    width: 200px;
+    height: 500px;
+    background-image: linear-gradient(-100deg, #0002, #0000);
+}
+.paper-folding .image div:nth-child(4){
+    background-position: -600px 0px;
+    transform: rotateY(-40deg) scale(1.15);
+    margin-left: -2.5%;
+}
+.paper-folding .image>div:nth-child(4)::after{
+    display: inline-block;
+    content: "";
+    width: 200px;
+    height: 500px;
+    background-image: linear-gradient(100deg, #0003, #0000);
+}
+.paper-folding .image div:nth-child(5){
+    background-position: -800px 0px;
+    transform: rotateY(40deg) scale(1.15);
+    margin-left: -2.5%;
+}
+.paper-folding .image>div:nth-child(5)::after{
+    display: inline-block;
+    content: "";
+    width: 200px;
+    height: 500px;
+    background-image: linear-gradient(-100deg, #0001, #0000);
+}
+.paper-folding .controls{
+    display: inline-block;
+    width: 100px;
+    height: 500px;
+    transform: translateY(-90px) translateX(-40px);
+}
+.paper-folding .controls a{
+    text-decoration: none;
+    display: inline-block;
+    color: #777;
+    font-size: 28px;
+    margin-bottom: 1em;
+    transition: 0.5s;
+}
+.paper-folding .controls a:nth-child(2){
+    margin-bottom: 7em;
+}
+.paper-folding .controls a:nth-child(3){
+    transform: scale(1.8);
+    margin-left: 60px;
+}
+i{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    color: #777;
+    transition: 0.5s;
+}
+.paper-folding .controls a:hover{
+    color: pink;
+    transition: 0.5s;
+}
+.paper-folding .controls a:hover i{
+    color: pink;
+    transition: 0.5s;
+}
