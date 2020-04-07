@@ -1,0 +1,138 @@
+body{
+    background-color: #333;
+}
+.paper-folding{
+    width: 1000px;
+    height: 500px;
+    border: 10px solid #FFF;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+.paper-folding .image{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    perspective: 500px;
+}
+.paper-folding .image>div{
+    position: absolute;
+    width: 20%;
+    height: 100%;
+    background-image: url(https://i.picsum.photos/id/866/1000/500.jpg);
+    transition: 1s;
+}
+.paper-folding .image>div:nth-child(1){
+    left: 0;
+}
+.paper-folding .image>div:nth-child(1)::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(-100deg, #000A, #0000);
+}
+.paper-folding .image>div:nth-child(2){
+    left: 14%;
+    background-position: -200px 0px;
+    transform: rotateY(-40deg) scale(1.15);
+}
+.paper-folding .image>div:nth-child(2)::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(100deg, #000A, #0001);
+}
+.paper-folding .image>div:nth-child(3){
+    left: 31.5%;
+    background-position: -400px 0px;
+    transform: rotateY(40deg) scale(1.15);
+}
+.paper-folding .image>div:nth-child(3)::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(-100deg, #0002, #0000);
+}
+.paper-folding .image>div:nth-child(4){
+    left: 49%;
+    background-position: -600px 0px;
+    transform: rotateY(-40deg) scale(1.15);
+}
+.paper-folding .image>div:nth-child(4)::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(100deg, #0003, #0000);
+}
+.paper-folding .image>div:nth-child(5){
+    left: 66.5%;
+    background-position: -800px 0px;
+    transform: rotateY(40deg) scale(1.15);
+}
+.paper-folding .image>div:nth-child(5)::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(-100deg, #0001, #0000);
+}
+.paper-folding .image:hover div{
+    position: absolute;
+    width: 20%;
+    height: 100%;
+    perspective: 0px;
+    transform: scale(1.0) rotateY(0deg);
+    transition: 1s;
+}
+.paper-folding .image:hover div:nth-child(2){
+    left: 20%;
+}
+.paper-folding .image:hover div:nth-child(3){
+    left: 40%;
+}
+.paper-folding .image:hover div:nth-child(4){
+    left: 60%;
+}
+.paper-folding .image:hover div:nth-child(5){
+    left: 80%;
+}
+.paper-folding .controls a{
+    text-decoration: none;
+    position: absolute;
+    color: #777;
+    font-size: 1.8em;
+    transition: 0.5s;
+}
+.paper-folding .controls a:nth-child(1){
+    left: 86%;
+    top: 10%;
+}
+.paper-folding .controls a:nth-child(2){
+    left: 86.2%;
+    top: 25%;
+}
+.paper-folding .controls a:nth-child(3){
+    left: 92%;
+    top: 80%;
+    transform: scale(2.0);
+}
+i{
+    color: #777;
+    font-size: 0.8em;
+    transition: 0.5s;
+}
+.paper-folding .controls a:hover{
+    color: pink;
+    transition: 0.5s;
+}
+.paper-folding .controls a:hover i{
+    color: pink;
+    transition: 0.5s;
+}
