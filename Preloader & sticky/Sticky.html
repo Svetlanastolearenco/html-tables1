@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS sticky position</title>
+    <style>
+        body{
+            background-color: #333;
+            color: #FFF;
+            height: 1500px;;
+        }
+        #lg{
+            width: 9vw;
+            height: 9vw;
+            border-radius: 100%;
+            background-color: #666;
+            box-shadow: inset 0 0 7px 2px #FFF;
+            position: sticky;
+            top: 50vw;
+            left: 46.5vw;
+        }
+        #sm{
+            width: 7.5vw;
+            height: 7.5vw;
+            border-radius: 100%;
+            background-color: #666;
+            box-shadow: 0 0 7px 2px #FFF;
+            position: absolute;
+            top: 0.75vw;
+            left: 0.75vw;
+        }
+        #sm::before{
+            content: "";
+            display: block;
+            width: 8vw;
+            height: 8vw;
+            border-radius: 100%;
+            border: 0.3vw solid blue;
+            border-top: transparent;
+            position: absolute;
+            top: -0.35vw;
+            left: -0.55vw;
+            animation: rotation 2s infinite;
+        }
+        p{
+            position: absolute;
+            left: 2vw;
+            top: 1.2vw;
+        }
+        h1{
+            text-align: center;
+        }
+        @keyframes rotation{
+            from{transform: rotate(0deg);}
+            to{transform: rotate(360deg);}
+        }
+    </style>
+</head>
+<body>
+    <div id="lg">
+        <div id="sm"><p>Hello</p></div>
+    </div>
+    <h1>Example with position sticky</h1>
+</body>
+</html>
