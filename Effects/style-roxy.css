@@ -1,0 +1,91 @@
+body{
+    background-color: #333;
+}
+.center{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+#effect{
+    width: 480px;
+    height: 360px;
+    cursor: pointer;
+    background-color: #fff;
+    background-image: url(https://i.picsum.photos/id/98/520/360.jpg);
+    background-position: -40px 0;
+    color: #FFF;
+    font-size: 1.25em;
+    transition: 0.5s;
+}
+#effect::after{
+    content: "";
+    display: block;
+    width: 480px;
+    height: 360px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background-image: linear-gradient(210deg, rgba(55, 159, 190, 0.3), rgba(243, 124, 124, 0.2));
+    transition: 0.5s;
+}
+#effect:hover{
+    background-position: 0 0;
+    transition: 0.5s;
+}
+#effect:hover::after{
+    content: "";
+    display: block;
+    width: 480px;
+    height: 360px;
+    position: absolute;
+    background-image: linear-gradient(210deg, rgba(55, 159, 190, 0.5), rgba(219, 114, 114, 0.35));
+    transition: 0.5s;
+}
+#effect>div{
+    display: block;
+    width: 86%;
+    height: 82%;
+    transition: 0.5s;
+}
+#effect:hover>div{
+    border: 1px solid #FFF;
+    transition: 0.5s;
+}
+#effect div div:nth-child(1){
+    font-family: 'Roboto Slab', serif;
+    position: absolute;
+    left: 1.4em;
+    top: 3.7em;
+    transition: 0.5s;
+}
+#effect div h1{
+    font-weight: 300;
+}
+#effect div h1 strong{
+    font-weight: 900;
+}
+#effect div div:nth-child(2){
+    display: none;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    transition: 0.5s;
+}
+#effect:hover div div:nth-child(2){
+    display: block;
+    width: 85%;
+    height: 30%;
+    position: absolute;
+    font-size: 0.7em;
+    text-align: left;
+    left: 2.2em;
+    top: 10em;
+    transition: 0.5s;
+}
+
+

@@ -1,0 +1,156 @@
+body{
+    font-family: 'Roboto Slab', serif;
+    background-color: #333;
+}
+#effect{
+    width: 480px;
+    height: 360px;
+    cursor: pointer;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background-image: url(https://i.picsum.photos/id/112/480/400.jpg);
+    background-position: 0 -40px;
+    color: #FFF;
+    font-size: 1.3em;
+    transition: 0.5s;
+}
+#effect::after{
+    content: "";
+    width: 480px;
+    height: 360px;
+    position: absolute;
+    background-image: linear-gradient(150deg, rgba(126, 183, 221, 0.10), rgba(68, 218, 135, 0.10), rgba(31, 129, 72, 0.10));
+    transition: 0.5s;
+}
+#effect:hover{
+    background-position: 0 0;
+    transition: 0.5s;
+}
+#effect:hover::after{
+    content: "";
+    width: 480px;
+    height: 360px;
+    position: absolute;
+    background-image: linear-gradient(150deg, rgba(126, 183, 221, 0.25), rgba(68, 218, 135, 0.25), rgba(31, 129, 72, 0.25));
+    transition: 0.5s;
+}
+#effect>div{
+    display: block;
+    width: 75%;
+    height: 70%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    transition: 0.5s;
+}
+#effect:hover>div{
+    border: 1px solid #FFF;
+    transition: 0.5s;
+}
+#effect:hover>div::before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: block;
+    position: absolute;
+    border: 1px solid #FFF;
+    border-left-color: transparent;
+    border-top-color: transparent;
+    left: -22px;
+    top: -22px;
+    transition: 0.5s;
+}
+#effect:hover>div::after{
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: block;
+    position: absolute;
+    border: 1px solid #FFF;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    right: -22px;
+    top: -22px;
+    transition: 0.5s;
+}
+#effect>div>div{
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    transition: 0.5s;
+}
+#effect:hover>div>div::before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: block;
+    position: absolute;
+    border: 1px solid #FFF;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+    left: -22px;
+    bottom: -22px;
+    transition: 0.5s;
+}
+#effect:hover>div>div::after{
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: block;
+    position: absolute;
+    border: 1px solid #FFF;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    right: -22px;
+    bottom: -22px;
+    transition: 0.5s;
+}  
+#effect div div div:nth-child(1){
+    position: absolute;
+    left: 1.9em;
+    top: 1.2em;
+    transition: 0.5s;
+}
+#effect:hover div div div:nth-child(1){
+    position: absolute;
+    left: 1.9em;
+    top: 2.3em;
+    transition: 0.5s;
+}
+#effect div h1{
+    font-weight: 300;
+}
+#effect div h1 strong{
+    font-weight: 900;
+}
+#effect div div div:nth-child(2){
+    display: none;
+    transition: 0.5s;
+}
+#effect:hover div div div:nth-child(2){
+    display: block;
+    width: 75%;
+    height: 30%;
+    position: absolute;
+    font-size: 0.75em;
+    top: 6.8em;
+    left: 2.3em;
+    transition: 0.5s;
+}
+p{
+    text-align: center;
+}
