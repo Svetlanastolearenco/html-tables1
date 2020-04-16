@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adaptive CSS</title>
+    <style>
+        body, ul{
+            margin: 0;
+        }
+        ul{
+            padding: 0;
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+        body{
+            font-family: Arial;
+            background-color: #333;
+        }
+        .navbar{
+            background-color: #555;
+            height: 3em;
+        }
+        .navbar ul:nth-child(1){
+            float: left;
+        }
+        .navbar ul:nth-child(2){
+            float: right;
+        }
+        .navbar ul:nth-child(2) li:last-child{
+            display: none;
+        }
+        .navbar ul:nth-child(2) li:last-child .icons{
+            width: 1em;
+            height: 0.3em;
+            border: 1px solid #555;
+            border-top-color: #FFF;
+            margin-top: 0.3px;
+        }
+        .navbar li{
+            float: left;
+        }
+        .navbar a{
+            color: #FFF;
+            display: block;
+            padding: 1em;
+        }
+        @media (max-width: 600px){
+            .navbar ul:nth-child(2) li{
+                display: none;
+            }
+            .navbar ul:nth-child(2) li:last-child{
+                display: block;
+            }
+        }
+        @media (max-width: 400px){
+            .navbar .brand small{
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li class="brand"><a href="">BRAND <small> | this is adaptive </small> </a></li>
+        </ul>
+        <ul>
+            <li><a href="">THIS</a></li>
+            <li><a href="">IS</a></li>
+            <li><a href="">THE</a></li>
+            <li><a href="">MAIN</a></li>
+            <li><a href="">MENU</a></li>
+            <li><a href="">
+                <div class="icons"></div>
+                <div class="icons"></div>
+                <div class="icons"></div>
+            </a></li>
+        </ul>
+    </nav>
+    
+</body>
+</html>
